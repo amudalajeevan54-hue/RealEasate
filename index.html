@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeevan Real Estate | Find Your Dream Property</title>
+  <meta name="description" content="Discover exceptional homes, premium apartments, commercial spaces, and investment opportunities with Jeevan Real Estate. Where Your Dream Home Begins.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Loading Animation screen -->
+  <div id="loader" aria-hidden="true">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Global Sticky Navigation Bar -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo" aria-label="Jeevan Real Estate Home">
+        <span class="logo-main">JEEVAN</span>
+        <span class="logo-sub">Real Estate</span>
+      </a>
+
+      <!-- Desktop/Mobile Navigation links -->
+      <nav class="nav-links" id="main-nav">
+        <a href="index.html">Home</a>
+        <a href="properties.html">Properties</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="agents.html">Agents</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Switch Toggle -->
+        <button class="theme-toggle-btn" aria-label="Toggle dark/light theme">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <a href="properties.html" class="btn btn-primary" style="padding: 0.6rem 1.3rem; font-size: 0.9rem;">View Properties</a>
+        
+        <!-- Mobile hamburger menu button -->
+        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Spectacular Hero Section -->
+    <section class="hero" id="hero-section">
+      <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1920&q=80');"></div>
+      <div class="hero-overlay"></div>
+      
+      <div class="hero-container">
+        <div class="hero-content reveal-left">
+          <span class="section-subtitle" style="text-align: left; color: var(--primary);">Premium Real Estate Brokerage</span>
+          <h1>Find a Place You'll<br>Love to <span>Call Home.</span></h1>
+          <p>Discover exceptional homes, premium apartments, commercial spaces, and investment opportunities with Jeevan Real Estate. Tailored advisory and curated properties in India's prime coordinates.</p>
+          <div class="hero-btns">
+            <a href="properties.html" class="btn btn-primary">Explore Properties</a>
+            <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+          </div>
+          
+          <!-- Static Hero Stats -->
+          <div class="hero-stats">
+            <div class="hero-stat-item">
+              <span class="hero-stat-number">250+</span>
+              <span class="hero-stat-label">Properties</span>
+            </div>
+            <div class="hero-stat-item">
+              <span class="hero-stat-number">180+</span>
+              <span class="hero-stat-label">Happy Clients</span>
+            </div>
+            <div class="hero-stat-item">
+              <span class="hero-stat-number">12+</span>
+              <span class="hero-stat-label">Years Exp</span>
+            </div>
+            <div class="hero-stat-item">
+              <span class="hero-stat-number">25+</span>
+              <span class="hero-stat-label">Expert Agents</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating Card component -->
+        <div class="hero-floating-card float-anim reveal-right">
+          <h3 class="floating-card-title">Featured Spotlights</h3>
+          
+          <div class="floating-property-item">
+            <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=120&q=80" alt="Penthouse view" class="floating-property-img">
+            <div class="floating-property-info">
+              <h4>Arabian Penthouse</h4>
+              <p>Mumbai, MH</p>
+              <span>$4,500,000</span>
+            </div>
+          </div>
+          
+          <div class="floating-property-item">
+            <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=120&q=80" alt="Coastal Villa" class="floating-property-img">
+            <div class="floating-property-info">
+              <h4>The Oasis Villa</h4>
+              <p>Goa, GA</p>
+              <span>$1,250,000</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Property Search Box Section -->
+    <div class="search-wrapper reveal-scale">
+      <form class="search-box" role="search">
+        <div class="search-grid">
+          <div class="search-item">
+            <label for="search-location">Location</label>
+            <select id="search-location" name="location">
+              <option value="">Any Location</option>
+              <option value="Goa">Goa</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Bangalore">Bangalore</option>
+              <option value="Pune">Pune</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Chennai">Chennai</option>
+            </select>
+          </div>
+          <div class="search-item">
+            <label for="search-type">Property Type</label>
+            <select id="search-type" name="type">
+              <option value="">Any Type</option>
+              <option value="villa">Villa</option>
+              <option value="apartment">Apartment</option>
+              <option value="house">House</option>
+              <option value="penthouse">Penthouse</option>
+              <option value="office">Commercial Office</option>
+            </select>
+          </div>
+          <div class="search-item">
+            <label for="search-min-price">Min Budget</label>
+            <select id="search-min-price" name="minPrice">
+              <option value="">No Min</option>
+              <option value="200000">$200,000</option>
+              <option value="500000">$500,000</option>
+              <option value="1000000">$1,000,000</option>
+              <option value="2000000">$2,000,000</option>
+            </select>
+          </div>
+          <div class="search-item">
+            <label for="search-max-price">Max Budget</label>
+            <select id="search-max-price" name="maxPrice">
+              <option value="">No Max</option>
+              <option value="500000">$500,000</option>
+              <option value="1000000">$1,000,000</option>
+              <option value="2000000">$2,000,000</option>
+              <option value="5000000">$5,000,000</option>
+            </select>
+          </div>
+          <button type="submit" id="home-search-btn" class="btn btn-primary" style="height: 50px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 5px;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            Search
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Featured Properties Segment -->
+    <section class="section properties-section">
+      <div class="section-header-wrap">
+        <div>
+          <span class="section-subtitle">Exquisite Spotlights</span>
+          <h2 class="section-title">Featured Properties</h2>
+        </div>
+        <a href="properties.html" class="btn btn-outline">Explore All Properties</a>
+      </div>
+      
+      <!-- Loaded dynamically via script.js -->
+      <div class="properties-grid" id="featured-properties-grid"></div>
+    </section>
+
+    <!-- Why Choose Jeevan? Section -->
+    <section class="section why-choose-section">
+      <div class="why-container">
+        <span class="section-subtitle">Core Pillars</span>
+        <h2 class="section-title">Why Choose <span>Jeevan Real Estate</span></h2>
+        
+        <div class="why-grid">
+          <div class="why-card reveal">
+            <div class="why-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Trusted Expertise</h3>
+            <p>Direct professional guidance steering transactions smoothly with clear legislative audits.</p>
+          </div>
+          
+          <div class="why-card reveal delay-100">
+            <div class="why-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12.5l3 3 5-6"/></svg>
+            </div>
+            <h3>Verified Properties</h3>
+            <p>Every asset is handpicked, undergoing rigorous physical inspections and clean title validations.</p>
+          </div>
+          
+          <div class="why-card reveal delay-200">
+            <div class="why-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h3>Transparent Process</h3>
+            <p>We mandate honest, open negotiations without hidden commissions or broker overheads.</p>
+          </div>
+          
+          <div class="why-card reveal delay-300">
+            <div class="why-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3>Customer First</h3>
+            <p>Your unique portfolio parameters, criteria, and design benchmarks dictate our focus.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Animated Statistics Counter Section -->
+    <section class="section stats-section" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80');">
+      <div class="hero-overlay" style="background: rgba(11, 25, 44, 0.85);"></div>
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <span class="stat-count" data-target="250">0</span>
+          <span class="stat-label">Luxury Properties</span>
+        </div>
+        <div class="stat-item reveal delay-100">
+          <span class="stat-count" data-target="180">0</span>
+          <span class="stat-label">Happy Clients</span>
+        </div>
+        <div class="stat-item reveal delay-200">
+          <span class="stat-count" data-target="12">0</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-item reveal delay-300">
+          <span class="stat-count" data-target="25">0</span>
+          <span class="stat-label">Expert Agents</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Carousel -->
+    <section class="section testimonials-section">
+      <span class="section-subtitle">Real Reviews</span>
+      <h2 class="section-title">Voices of Our <span>Happy Clients</span></h2>
+      
+      <div class="testimonials-container reveal-scale">
+        <div class="testimonial-track">
+          
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <span class="quote-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+              </span>
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" alt="Sarah Jenkins" class="testimonial-img" loading="lazy">
+              <p class="testimonial-text">"Buying our ocean villa through Jeevan Real Estate was a stellar experience. Their advisors handled legal checks meticulously, making the purchase completely stress-free. Professionalism at its absolute finest."</p>
+              <div class="testimonial-stars">★★★★★</div>
+              <h4 class="testimonial-name">Sarah Jenkins</h4>
+              <span class="testimonial-role">Villa Owner, Goa</span>
+            </div>
+          </div>
+          
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <span class="quote-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+              </span>
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Rajeev Mehta" class="testimonial-img" loading="lazy">
+              <p class="testimonial-text">"The search algorithm matched my preferences perfectly. Working with Rohan for our commercial office leases in BKC saved us months. Highly recommended for enterprise profiles."</p>
+              <div class="testimonial-stars">★★★★★</div>
+              <h4 class="testimonial-name">Rajeev Mehta</h4>
+              <span class="testimonial-role">CEO, TechVantage</span>
+            </div>
+          </div>
+
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <span class="quote-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+              </span>
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&q=80" alt="Meera Iyer" class="testimonial-img" loading="lazy">
+              <p class="testimonial-text">"Transparent pricing, no hidden broker charges, and an exceptional eye for interior values. Jeevan Real Estate redefined my standards of buying assets in India."</p>
+              <div class="testimonial-stars">★★★★★</div>
+              <h4 class="testimonial-name">Meera Iyer</h4>
+              <span class="testimonial-role">Investment Director</span>
+            </div>
+          </div>
+
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <span class="quote-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+              </span>
+              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80" alt="David Miller" class="testimonial-img" loading="lazy">
+              <p class="testimonial-text">"From my initial virtual tour to final registration, the communication was superb. Aanya is truly an expert who listens and delivers with maximum integrity."</p>
+              <div class="testimonial-stars">★★★★★</div>
+              <h4 class="testimonial-name">David Miller</h4>
+              <span class="testimonial-role">Expat Resident, Pune</span>
+            </div>
+          </div>
+          
+        </div>
+        
+        <!-- Next/Previous Buttons -->
+        <button class="btn-icon carousel-control prev" aria-label="Previous testimonial">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <button class="btn-icon carousel-control next" aria-label="Next testimonial">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+
+        <!-- Dynamic Dots Container -->
+        <div class="carousel-dots"></div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="section cta-section" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=80');">
+      <div class="hero-overlay" style="background: rgba(11, 25, 44, 0.8); z-index: 2;"></div>
+      <div class="cta-container">
+        <h2 class="cta-title reveal">Ready to Find Your Dream Property?</h2>
+        <p class="cta-desc reveal delay-100">“Where Your Dream Home Begins.” Join over 180+ families and corporates who placed their absolute trust in Jeevan Real Estate.</p>
+        <div class="reveal delay-200">
+          <a href="contact.html" class="btn btn-primary" style="padding: 1rem 2.5rem; font-size: 1rem;">Talk to Jeevan</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="color: #ffffff; margin-bottom: 1.5rem;">
+          <span class="logo-main">JEEVAN</span>
+          <span class="logo-sub">Real Estate</span>
+        </a>
+        <p class="footer-desc">Premium real estate brokerage creating luxury lifestyles, offering unparalleled transactional integrity, and listing the finest locations across India.</p>
+        <div class="social-links">
+          <a href="#" class="social-icon" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+          </a>
+          <a href="#" class="social-icon" aria-label="Twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+          </a>
+          <a href="#" class="social-icon" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a href="#" class="social-icon" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-links-col">
+        <h3 class="footer-title">Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="properties.html">Properties Listings</a></li>
+          <li><a href="about.html">About Jeevan</a></li>
+          <li><a href="services.html">Services Portfolio</a></li>
+          <li><a href="agents.html">Expert Agents</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h3 class="footer-title">Properties</h3>
+        <ul class="footer-links">
+          <li><a href="properties.html?type=villa">Luxury Villas</a></li>
+          <li><a href="properties.html?type=penthouse">Sky Penthouses</a></li>
+          <li><a href="properties.html?type=apartment">Premium Condos</a></li>
+          <li><a href="properties.html?type=house">Modernist Houses</a></li>
+          <li><a href="properties.html?type=office">Corporate Offices</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h3 class="footer-title">Contact Info</h3>
+        <ul class="footer-contact">
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>701 Elite Towers, Bandra Kurla Complex,<br>Mumbai, MH 400051</span>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>+91 98765 43210</span>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <span>info@jeevanrealestate.com</span>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <span>Mon - Sat: 9:00 AM - 6:00 PM</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2026 Jeevan Real Estate. All Rights Reserved. Built with Premium Standards.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" aria-label="Scroll back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
